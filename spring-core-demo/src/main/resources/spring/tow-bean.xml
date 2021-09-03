@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="leaf" class="com.naocn.leoj.spring.core.demo.beans.Leaf">
+        <property name="name" value="green"/>
+    </bean>
+
+    <bean id="tree" class="com.naocn.leoj.spring.core.demo.beans.Tree">
+        <property name="leaf" ref="leaf"/>
+    </bean>
+
+</beans>

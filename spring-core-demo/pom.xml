@@ -14,7 +14,7 @@
     <name>spring-core-demo</name>
 
 
-    <properties>
+    <properties>ww
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <spring.version>5.2.16.RELEASE</spring.version>
@@ -41,6 +41,11 @@
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>1.8.6</version>
         </dependency>
     </dependencies>
 

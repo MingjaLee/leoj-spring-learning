@@ -1,13 +1,38 @@
 package com.naocn.leoj.spring.core.demo;
 
 import com.naocn.leoj.spring.core.demo.beans.Leaf;
-import com.naocn.leoj.spring.core.demo.beans.Tree3;
-import com.naocn.leoj.spring.core.demo.config.LifeCycleConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.GenericApplicationContext;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class LifeCycleExample2 {
+    static class Tree3 {
+        @Autowired
+        private Leaf leaf;
+
+        public void sayHello() {
+            System.out.println("get a leaf: " + leaf.getName());
+        }
+
+        public Tree3() {
+            System.out.println("construct the tree.");
+        }
+
+        @PostConstruct
+        public void init() {
+            System.out.println("init the tree.");
+        }
+
+        @PreDestroy
+        public void destroy() {
+            System.out.println("destroy the tree.");
+        }
+    }
+
     static class LifeCycleConfig2 {
         @Bean
         public Leaf leaf() {
@@ -23,7 +48,10 @@ public class LifeCycleExample2 {
     }
 
     public static void main(String[] args) throws InterruptedException {
+        System.out.println("context about to start.");
         GenericApplicationContext context = new AnnotationConfigApplicationContext(LifeCycleConfig2.class);
+        context.registerShutdownHook();
+        System.out.println("context ready.");
         Tree3 tree3 = context.getBean("tree3", Tree3.class);
         tree3.sayHello();
         Thread.sleep(500);

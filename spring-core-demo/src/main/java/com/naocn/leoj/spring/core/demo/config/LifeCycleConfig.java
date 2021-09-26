@@ -18,4 +18,9 @@ public class LifeCycleConfig {
     public Tree2 tree2() {
         return new Tree2();
     }
+
+    public static void main(String[] args) {
+        Object a = null;
+        System.out.println("abc" + a);
+    }
 }

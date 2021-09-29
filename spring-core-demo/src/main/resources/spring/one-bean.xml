@@ -6,4 +6,6 @@
         <property name="name" value="green"/>
     </bean>
 
+    <alias name="leaf" alias="leaf1"/>
+
 </beans>

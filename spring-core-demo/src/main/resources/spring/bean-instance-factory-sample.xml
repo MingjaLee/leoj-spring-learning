@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="leaf" class="com.naocn.leoj.spring.core.demo.beans.Leaf">
+        <property name="name" value="instance-factory-leaf"/>
+    </bean>
+
+    <bean id="tree" factory-bean="treeFactory" factory-method="getInstance">
+        <constructor-arg>
+            <ref bean="leaf"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="treeFactory" class="com.naocn.leoj.spring.core.demo.beans.factory.InstanceFactory">
+    </bean>
+</beans>

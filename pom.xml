@@ -18,6 +18,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring.version>5.2.16.RELEASE</spring.version>
+        <spring.boot.version>2.1.0.RELEASE</spring.boot.version>
     </properties>
 
     <developers>
@@ -29,9 +30,22 @@
     </developers>
 
     <modules>
-        <!--        <module>spring-core-demo</module>-->
         <module>spring-core-demo</module>
+        <module>spring-log-demo</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <build>
         <resources>

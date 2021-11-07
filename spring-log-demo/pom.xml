@@ -16,6 +16,7 @@
     <modules>
         <module>spring-logback-demo</module>
         <module>spring-log4j-demo</module>
+        <module>spring-log4j-bridge-logback-demo</module>
     </modules>
 
 

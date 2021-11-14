@@ -14,8 +14,8 @@
 
 | Module 名称                                                  | Module 介绍                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Spring-core-demo](./Spring-core-demo)                       | spring-core模块学习，包括IoC Container, Events, Resources, i18n, Validation, Data Binding, Type Conversion, SpEL, AOP.等内容|                             |
-| [Spring-log-demo](./Spring-log-demo)                         | spring-boot日志框架桥接和使用样例|                             
+| [spring-core-demo](./spring-core-demo)                       | spring-core模块学习，包括IoC Container, Events, Resources, i18n, Validation, Data Binding, Type Conversion, SpEL, AOP.等内容|                             |
+| [spring-log-demo](./spring-log-demo)                         | spring-boot日志框架桥接和使用样例|                             
 
 ### License
 

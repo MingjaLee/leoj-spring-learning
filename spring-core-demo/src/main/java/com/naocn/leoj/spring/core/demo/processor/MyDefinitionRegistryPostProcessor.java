@@ -11,7 +11,6 @@ import org.springframework.core.PriorityOrdered;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Component;
 
-@Component
 public class MyDefinitionRegistryPostProcessor implements BeanDefinitionRegistryPostProcessor, PriorityOrdered {
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {

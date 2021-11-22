@@ -7,3 +7,5 @@
   BeanFactoryPostProcessor样例
 - [LifeCycleExample](src/main/java/com/naocn/leoj/spring/core/demo/LifeCycleExample.java)
   lifeCycle，BeanPostProcessor处理器
+- [BeanFactoryExtendsExample](src/main/java/com/naocn/leoj/spring/core/demo/xml/BeanFactoryExtendsExample.java)
+  BeanFactory 接口扩展功能案例，如AutowireCapableBeanFactory

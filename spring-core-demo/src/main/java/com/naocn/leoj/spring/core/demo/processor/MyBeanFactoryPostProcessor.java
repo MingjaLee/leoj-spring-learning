@@ -15,7 +15,8 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
             if (name.equals("leaf")){
                 BeanDefinition beanDefinition = beanFactory.getBeanDefinition(name);
                 MutablePropertyValues propertyValues = beanDefinition.getPropertyValues();
-                propertyValues.add("name","change to Red");
+                String newName = "name " + propertyValues.get("name") + " change to Red";
+                propertyValues.add("name",newName);
             }
         }
         System.out.println(">> MyBeanFactoryPostProcessor end");

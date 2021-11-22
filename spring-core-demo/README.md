@@ -3,5 +3,7 @@
 
 - [RegistryPostProcessorExample](src/main/java/com/naocn/leoj/spring/core/demo/RegistryPostProcessorExample.java)  
   自定义xml解析样例，BeanDefinitionRegistryPostProcessor处理器
+- [BeanFactoryPostProcessorExample](src/main/java/com/naocn/leoj/spring/core/demo/BeanFactoryPostProcessorExample.java)
+  BeanFactoryPostProcessor样例
 - [LifeCycleExample](src/main/java/com/naocn/leoj/spring/core/demo/LifeCycleExample.java)
   lifeCycle，BeanPostProcessor处理器

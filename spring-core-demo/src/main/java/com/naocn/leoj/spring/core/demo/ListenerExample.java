@@ -9,6 +9,8 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.event.EventListener;
+import org.springframework.core.annotation.Order;
 
 public class ListenerExample {
     @Configuration
@@ -33,6 +35,19 @@ public class ListenerExample {
         @Bean
         public CustomSpringEventPublisher customSpringEventPublisher() {
             return new CustomSpringEventPublisher();
+        }
+
+        // 注解监听器
+        @EventListener
+        @Order(1)
+        public void listenAnnotation(CustomApplicationEvent event) {
+            System.out.println(">> @EventListener1: " + event.getMessage());
+        }
+
+        @EventListener
+        @Order(2)
+        public void listenAnnotation2(CustomApplicationEvent event) {
+            System.out.println(">> @EventListener2: " + event.getMessage());
         }
 
     }

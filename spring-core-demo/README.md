@@ -9,3 +9,5 @@
   lifeCycle，BeanPostProcessor处理器
 - [BeanFactoryExtendsExample](src/main/java/com/naocn/leoj/spring/core/demo/xml/BeanFactoryExtendsExample.java)
   BeanFactory 接口扩展功能案例，如AutowireCapableBeanFactory
+- [ListenerExample](src/main/java/com/naocn/leoj/spring/core/demo/ListenerExample.java)
+  spring事件机制
